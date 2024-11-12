@@ -29,6 +29,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(0px, 1fr));
   gap: 0px 35px;
+  
 }
 
 .cardsBtn{
@@ -42,6 +43,44 @@ body {
     line-height: 25px;
     padding: 8px 15px;
     background-image: linear-gradient(rgb(141, 213, 79) 0%, rgb(90, 163, 28) 100%);
+}
+
+.gridBtn{
+  border-radius: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    box-shadow: rgba(28, 54, 97, 0.3) 0px 10px 20px 0px;
+    background-image: linear-gradient(rgb(164, 232, 105) 0%, rgb(90, 175, 16) 100%);
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 20px;
+    display: flex;
+}
+.gridBtn:before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0px;
+  width: 22%;
+  height: 100%;
+  background-image: linear-gradient(rgb(141, 213, 79) 0%, rgb(90, 163, 28) 100%);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-45%);
+  }
+}
+
+.bounce-animation {
+  animation: 800ms linear 0s infinite bounce;
 }
 
 
