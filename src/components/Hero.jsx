@@ -1,6 +1,41 @@
+/* eslint-disable react/no-unescaped-entities */
+import { useState } from 'react'
 import earth from '../assets/img/hero/earth.webp'
+import axios from 'axios'
 
-const Hero = () => {
+// eslint-disable-next-line react/prop-types
+const Hero = ({ openModal }) => {
+	const [loading, setLoading] = useState(false)
+	const sentMessage = event => {
+		setLoading(true)
+		event.preventDefault()
+		const token = '7954607373:AAH2rtaqpp9kpQZJDbo-GXOJeLUYn1GLEMs'
+		const chat_id = -1002400739763
+		const url = `https://api.telegram.org/bot${token}/sendMessage`
+
+		const name = document.getElementById('contact_name').value
+		const phone = document.getElementById('phone_num').value
+
+		const messageAll = `Ismi: ${name}, \nTel: ${phone}`
+
+		axios({
+			url: url,
+			method: 'Post',
+			data: {
+				chat_id: chat_id,
+				text: messageAll,
+			},
+		})
+			.then(() => {
+				openModal()
+			})
+			.catch(error => console.log('Something went wrong!', error))
+			.finally(() => {
+				document.getElementById('contact_form').reset()
+				setLoading(false)
+			})
+	}
+
 	return (
 		<section
 			id='Hero'
@@ -32,9 +67,13 @@ const Hero = () => {
 							ingliz tili darajangizni oshirishga kafolat beradi
 						</p>
 					</div>
-					<form action='POST' className='flex flex-col gap-4 w-[475px]'>
+					<form
+						htmlFor={'contact_btn'}
+						className='flex flex-col gap-4 w-[475px]'
+						id='contact_form'
+						onSubmit={sentMessage}
+					>
 						<span
-							type='text'
 							className='min-h-[50px] px-5 rounded-[10px] text-[18px] h-[50px] outline-none box-border min-w-[364px] flex items-center '
 							style={{
 								boxShadow: 'rgba(7, 7, 7, 0.05) 0px 1px 1px',
@@ -44,15 +83,17 @@ const Hero = () => {
 						>
 							<span>+998 </span>
 							<input
-								className='flex-1 ml-1 border-none outline-none bg-transparent h-full '
+								required
+								className='flex-1 ml-1 border-none outline-none h-full bg-[#f2f2f2] appearance-none'
 								type='number'
 								placeholder='XXXXXXXXX'
+								id='phone_num'
+								min={9}
 							/>
 							<span className='opacity-[0.45]'>0 / 9</span>
 						</span>
 
 						<span
-							type='text'
 							className='min-h-[50px] px-5 rounded-[10px] text-[18px] h-[50px] outline-none box-border min-w-[364px] '
 							style={{
 								boxShadow: 'rgba(7, 7, 7, 0.05) 0px 1px 1px',
@@ -61,14 +102,19 @@ const Hero = () => {
 							}}
 						>
 							<input
+								required
 								className='flex-1 border-none outline-none bg-transparent h-full '
 								type='text'
 								placeholder='Ism, familiya'
+								min={10}
+								id='contact_name'
 							/>
 						</span>
 
 						<div className='flex flex-wrap gap-[15px]'>
 							<button
+								htmlFor='contact_form'
+								id='contact_btn'
 								className='px-[15px] w-[230px] flex justify-center items-center font-semibold h-[60px] rounded-[10px] text-white  text-[18px] cursor-pointer transition-all uppercase'
 								style={{
 									boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.3) ',
@@ -76,7 +122,7 @@ const Hero = () => {
 										'linear-gradient(rgb(164, 232, 105) 0%, rgb(90, 175, 16) 100%)',
 								}}
 							>
-								O'qishni Boshlang!
+								{loading ? 'Loading...' : "O'qishni Boshlang!"}
 							</button>
 
 							<a
