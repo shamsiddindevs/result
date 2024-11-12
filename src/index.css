@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: Gilroy, sans-serif !important;
+}
+
+/* src/index.css yoki src/App.css */
+.after-gradient {
+  position: relative;
+}
+
+.after-gradient::after {
+  content: "";
+  z-index: 0;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-image: linear-gradient(rgba(81, 163, 254, 0) 0%, rgb(81, 163, 254) 84%);
+}
+
+
+.animation-rotation {
+  animation: rotation 20s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
