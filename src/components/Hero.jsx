@@ -1,4 +1,5 @@
 import Input from "../generics/Input";
+import earth from "../assets/img/hero/earth.webp"
 
 const Hero = () => {
   return (
@@ -103,7 +104,7 @@ const Hero = () => {
         </div>
         <div className="absolute -bottom-[80%] -right-[35%] animation-rotation ">
           <img className="max-w-[1052px] h-auto"
-            src="/src/assets/img/hero/earth.webp"
+            src={earth}
             alt="animation earth"
           />
         </div>
