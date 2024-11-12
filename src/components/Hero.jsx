@@ -103,7 +103,7 @@ const Hero = () => {
         </div>
         <div className="absolute -bottom-[80%] -right-[35%] animation-rotation ">
           <img className="max-w-[1052px] h-auto"
-            src="./src/assets/img/hero/earth.webp"
+            src="/src/assets/img/hero/earth.webp"
             alt="animation earth"
           />
         </div>
