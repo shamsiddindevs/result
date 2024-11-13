@@ -67,6 +67,10 @@ const App = () => {
 				<Hero openModal={openModal} />
 				<ContactModal isModalOpen={isModalOpen} closeModal={closeModal} />
 				<About />
+      <Program />
+      <Result/>
+      <Tarif/>
+      <Savol/>
 				<News />
 				<Testimonal />
 				<Contact />
