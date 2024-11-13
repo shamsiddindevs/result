@@ -3,58 +3,6 @@ import { useState } from 'react'
 import earth from '../assets/img/hero/earth.webp'
 import axios from 'axios'
 
-<<<<<<< HEAD
-const Hero = () => {
-  return (
-    <section
-      id="Hero"
-      className="py-[80px] overflow-hidden relative z-index-1 after-gradient">
-      <div className="w-full max-w-[1200px] mx-auto  px-5  ">
-        <div className="flex flex-col gap-4 max-w-[580px] z-[2] relative">
-          <div className="flex gap-6 items-center ">
-            <div className="text-white leading-[25px] text-[20px]">
-              <h4 className="font-bold">Format:</h4>
-              <h4>Online</h4>
-            </div>
-            <div className="text-white text-center leading-[25px] text-[20px]">
-              <h4 className="font-bold">Bo'talog'im</h4>
-              <h4>790 000 so'm</h4>
-            </div>
-            <div className="text-white text-center leading-[25px] text-[20px]">
-              <h4 className="font-bold">Jo'shqin 3 oy</h4>
-              <h4>990 000 so'm</h4>
-            </div>
-          </div>
-          <div className="text-[64px] leading-[80px] text-white font-bold">
-            <h1>General Chinese</h1>
-          </div>
-          <div className="text-white  leading-[25px] text-[20px]">
-            <p className="font-bold">
-              Zamonaviy o’quv platformasi, qiyqiriq videodarslar va haftada 6
-              kun o’qituvchi bilan jonli onlayn darslar sizga atigi 3 oyda
-              ingliz tili darajangizni oshirishga kafolat beradi
-            </p>
-          </div>
-          <form
-            
-            className="flex flex-col gap-4  lg:max-w-[580px]">
-            <span
-              type="text"
-              className="min-h-[50px] px-5 rounded-[10px] text-[18px] h-[50px] outline-none box-border min-w-[364px] flex items-center "
-              style={{
-                boxShadow: "rgba(7, 7, 7, 0.05) 0px 1px 1px",
-                backgroundColor: "rgb(247, 247, 247)",
-                border: "1px solid rgba(51, 51, 51, 0.1)",
-              }}>
-              <span>+998 </span>
-              <input
-                className="flex-1 ml-1 border-none outline-none bg-transparent h-full "
-                type="number"
-                placeholder="XXXXXXXXX"
-              />
-              <span className="opacity-[0.45]">0 / 9</span>
-            </span>
-=======
 // eslint-disable-next-line react/prop-types
 const Hero = ({ openModal }) => {
 	const [loading, setLoading] = useState(false)
@@ -64,7 +12,6 @@ const Hero = ({ openModal }) => {
 		const token = '7954607373:AAH2rtaqpp9kpQZJDbo-GXOJeLUYn1GLEMs'
 		const chat_id = -1002400739763
 		const url = `https://api.telegram.org/bot${token}/sendMessage`
->>>>>>> bf2e3c1ad0cd54d70a3fb84985b0748dc265baa5
 
 		const name = document.getElementById('contact_name').value
 		const phone = document.getElementById('phone_num').value

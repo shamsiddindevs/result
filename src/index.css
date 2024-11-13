@@ -3,164 +3,161 @@
 @tailwind utilities;
 
 body {
-  font-family: Gilroy, sans-serif !important;
+	font-family: Gilroy, sans-serif !important;
 }
 
 /* src/index.css yoki src/App.css */
 .after-gradient {
-  position: relative;
+	position: relative;
 }
 
 .after-gradient::after {
-  content: "";
-  z-index: 0;
-  height: 200px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  background-image: linear-gradient(
-    rgba(81, 163, 254, 0) 0%,
-    rgb(81, 163, 254) 84%
-  );
+	content: '';
+	z-index: 0;
+	height: 200px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-image: linear-gradient(
+		rgba(81, 163, 254, 0) 0%,
+		rgb(81, 163, 254) 84%
+	);
 }
 .cardsGrid {
-  grid-template-columns: repeat(2, minmax(0px, 1fr));
+	grid-template-columns: repeat(2, minmax(0px, 1fr));
 }
 
 .cardsBtn {
-  border: 2px solid rgb(185, 218, 255);
-  border-radius: 10px;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  font-size: 20px;
-  font-family: Gilroy, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 25px;
-  padding: 8px 15px;
-  background-image: linear-gradient(
-    rgb(141, 213, 79) 0%,
-    rgb(90, 163, 28) 100%
-  );
+	border: 2px solid rgb(185, 218, 255);
+	border-radius: 10px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 20px;
+	font-family: Gilroy, Arial, sans-serif;
+	font-weight: 700;
+	line-height: 25px;
+	padding: 8px 15px;
+	background-image: linear-gradient(
+		rgb(141, 213, 79) 0%,
+		rgb(90, 163, 28) 100%
+	);
 }
 
 .gridBtn {
-  border-radius: 10px;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  box-shadow: rgba(28, 54, 97, 0.3) 0px 10px 20px 0px;
-  background-image: linear-gradient(
-    rgb(164, 232, 105) 0%,
-    rgb(90, 175, 16) 100%
-  );
-  position: relative;
-  overflow: hidden;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding: 20px;
-  display: flex;
+	border-radius: 10px;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	box-shadow: rgba(28, 54, 97, 0.3) 0px 10px 20px 0px;
+	background-image: linear-gradient(
+		rgb(164, 232, 105) 0%,
+		rgb(90, 175, 16) 100%
+	);
+	position: relative;
+	overflow: hidden;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 20px;
+	display: flex;
 }
 .gridBtn:before {
-  content: "";
-  position: absolute;
-  left: -5px;
-  top: 0px;
-  width: 22%;
-  height: 100%;
-  background-image: linear-gradient(
-    rgb(141, 213, 79) 0%,
-    rgb(90, 163, 28) 100%
-  );
+	content: '';
+	position: absolute;
+	left: -5px;
+	top: 0px;
+	width: 22%;
+	height: 100%;
+	background-image: linear-gradient(
+		rgb(141, 213, 79) 0%,
+		rgb(90, 163, 28) 100%
+	);
 }
 
 @keyframes bounce {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-45%);
-  }
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-45%);
+	}
 }
 
 .bounce-animation {
-  animation: 800ms linear 0s infinite bounce;
+	animation: 800ms linear 0s infinite bounce;
 }
 
 .animation-rotation {
-  animation: rotation 20s linear infinite;
+	animation: rotation 20s linear infinite;
 }
 
 @keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
-<<<<<<< HEAD
 /* Programm */
 .programCard {
-  border: 4px solid rgb(255, 218, 146);
-  border-radius: 20px;
-  background-color: rgb(255, 255, 255);
-  padding: 20px 20px 30px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+	border: 4px solid rgb(255, 218, 146);
+	border-radius: 20px;
+	background-color: rgb(255, 255, 255);
+	padding: 20px 20px 30px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 /* result */
 .resultCard {
-  border: 4px solid rgb(223, 199, 254);
-  border-radius: 20px;
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-  position: relative;
-  display: flex;
+	border: 4px solid rgb(223, 199, 254);
+	border-radius: 20px;
+	background-color: rgb(255, 255, 255);
+	padding: 20px;
+	position: relative;
+	display: flex;
 }
 /* tarif */
 .tarifCard {
-  border: 4px solid rgb(98, 172, 254);
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 90px 20px 30px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-width: 360px;
+	border: 4px solid rgb(98, 172, 254);
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 90px 20px 30px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 360px;
 }
 
-.tarifBtn{
-  border: 2px solid rgb(185, 218, 255);
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 20px;
-    font-family: Gilroy, Arial, sans-serif;
-    font-weight: 700;
-    line-height: 25px;
-    padding: 8px 15px;
-    text-transform: uppercase;
-    display: inline-block;    
+.tarifBtn {
+	border: 2px solid rgb(185, 218, 255);
+	border-radius: 10px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 20px;
+	font-family: Gilroy, Arial, sans-serif;
+	font-weight: 700;
+	line-height: 25px;
+	padding: 8px 15px;
+	text-transform: uppercase;
+	display: inline-block;
 }
 
 /* savol */
 
-=======
 @layer utilities {
-  input[type="number"]::-webkit-outer-spin-button,
-  input[type="number"]::-webkit-inner-spin-button {
-    @apply appearance-none; 
-    margin: 0;
-  }
+	input[type='number']::-webkit-outer-spin-button,
+	input[type='number']::-webkit-inner-spin-button {
+		@apply appearance-none;
+		margin: 0;
+	}
 
-  input[type="number"] {
-    @apply appearance-none;
-  }
+	input[type='number'] {
+		@apply appearance-none;
+	}
 }
->>>>>>> bf2e3c1ad0cd54d70a3fb84985b0748dc265baa5
