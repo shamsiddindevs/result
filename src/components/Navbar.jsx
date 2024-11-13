@@ -4,12 +4,12 @@ const Navbar = () => {
   return (
     <header className="bg-transparent min-h-[70px]   flex items-center  " >
       <div className="flex items-center w-full max-w-[1200px] mx-auto px-5 gap-10">
-        <div className="text-3xl text-white font-bold">Hanyuban</div>
+        <div className="text-3xl text-white font-bold" style={{fontFamily:"cursive"}}>Hanyuban</div>
         <ul className="flex items-center ml-auto gap-20 ">
-          <li>
+          <li className="hidden lg:block">
             <a className="text-white font-semibold text-[18px] hover:text-[#69b1ff]" href="#">Programma</a>
           </li>
-          <li>
+          <li className="hidden lg:block">
             <a className="text-white font-semibold text-[18px] hover:text-[#69b1ff]"  href="#">Tariflar</a>
           </li>
           <li>

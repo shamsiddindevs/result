@@ -19,7 +19,7 @@ const About = () => {
             Bizning kursimiz kimga to’g’ri keladi va sizga qanday natijalar olib
             keladi:
           </h1>
-          <div className="cardsGrid">
+          <div className="grid grid-cols-1 lg:grid-cols-2  gap-[35px] ">
             <div
               className="mt-[90px] rounded-[20px] px-[45px] pt-[90px] pb-[45px] relative flex flex-col"
               style={{
@@ -308,7 +308,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="py-[100px] flex justify-center align-center">
+          <div className="py-[50px] lg:py-[100px] flex justify-center align-center">
             <a href="#" className="gridBtn">
               <span >
                 <FaChevronRight className="absolute top-3 left-[20px] w-[15px] h-[42px] bounce-animation" />

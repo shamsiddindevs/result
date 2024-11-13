@@ -33,8 +33,8 @@ const Hero = () => {
             </p>
           </div>
           <form
-            action="POST"
-            className="flex flex-col gap-4 w-[475px]">
+            
+            className="flex flex-col gap-4  lg:max-w-[580px]">
             <span
               type="text"
               className="min-h-[50px] px-5 rounded-[10px] text-[18px] h-[50px] outline-none box-border min-w-[364px] flex items-center "
