@@ -6,6 +6,7 @@ import axios from 'axios'
 // eslint-disable-next-line react/prop-types
 const Hero = ({ openModal }) => {
 	const [loading, setLoading] = useState(false)
+
 	const sentMessage = event => {
 		setLoading(true)
 		event.preventDefault()
@@ -39,25 +40,25 @@ const Hero = ({ openModal }) => {
 	return (
 		<section
 			id='Hero'
-			className='pb-[80px] pt-36 overflow-hidden relative z-index-1 after-gradient'
+			className='pb-[80px] pt-24 text-center md:text-start md:pt-36 overflow-hidden relative z-index-1 after-gradient'
 		>
-			<div className='w-full max-w-[1200px] mx-auto  px-5  '>
-				<div className='flex flex-col gap-4 max-w-[580px] z-[2] relative'>
+			<div className='w-full max-w-[1200px] mx-auto  md:px-5 flex items-center justify-center md:items-start md:justify-start'>
+				<div className='flex flex-col items-center justify-center md:items-start gap-4 max-w-[580px] z-[2] relative'>
 					<div className='flex gap-6 items-center '>
 						<div className='text-white leading-[25px] text-[20px]'>
-							<h4 className='font-bold'>Format:</h4>
-							<h4>Online</h4>
+							<h4 className='font-medium md:font-bold'>Format:</h4>
+							<p className='font-extralight md:font-medium'>Online</p>
 						</div>
 						<div className='text-white text-center leading-[25px] text-[20px]'>
-							<h4 className='font-bold'>Bo'talog'im</h4>
-							<h4>790 000 so'm</h4>
+							<h4 className='font-medium md:font-bold'>Bo'talog'im</h4>
+							<p className='font-extralight md:font-medium'>790 000 so'm</p>
 						</div>
 						<div className='text-white text-center leading-[25px] text-[20px]'>
-							<h4 className='font-bold'>Jo'shqin 3 oy</h4>
-							<h4>990 000 so'm</h4>
+							<h4 className='font-medium md:font-bold'>Jo'shqin 3 oy</h4>
+							<p className='font-extralight md:font-medium'>990 000 so'm</p>
 						</div>
 					</div>
-					<div className='text-[64px] leading-[80px] text-white font-bold'>
+					<div className='text-4xl md:text-6xl text-white font-semibold md:font-bold'>
 						<h1>General Chinese</h1>
 					</div>
 					<div className='text-white  leading-[25px] text-[20px]'>
@@ -69,12 +70,12 @@ const Hero = ({ openModal }) => {
 					</div>
 					<form
 						htmlFor={'contact_btn'}
-						className='flex flex-col gap-4 w-[475px]'
+						className='flex flex-col gap-4 md:w-[450px]'
 						id='contact_form'
 						onSubmit={sentMessage}
 					>
 						<span
-							className='min-h-[50px] px-5 rounded-[10px] text-[18px] h-[50px] outline-none box-border min-w-[364px] flex items-center '
+							className='min-h-[50px] px-5 rounded-[10px] text-[18px]  outline-none box-border min-w-[364px] flex items-center '
 							style={{
 								boxShadow: 'rgba(7, 7, 7, 0.05) 0px 1px 1px',
 								backgroundColor: 'rgb(247, 247, 247)',
@@ -94,7 +95,7 @@ const Hero = ({ openModal }) => {
 						</span>
 
 						<span
-							className='min-h-[50px] px-5 rounded-[10px] text-[18px] h-[50px] outline-none box-border min-w-[364px] '
+							className='px-5 rounded-[10px] text-[18px] h-[50px] outline-none box-border min-w-[364px] '
 							style={{
 								boxShadow: 'rgba(7, 7, 7, 0.05) 0px 1px 1px',
 								backgroundColor: 'rgb(247, 247, 247)',
@@ -103,7 +104,7 @@ const Hero = ({ openModal }) => {
 						>
 							<input
 								required
-								className='flex-1 border-none outline-none bg-transparent h-full '
+								className='flex-1 border-none outline-none bg-transparent h-full mr-24 md:mr-0'
 								type='text'
 								placeholder='Ism, familiya'
 								min={10}
@@ -111,7 +112,7 @@ const Hero = ({ openModal }) => {
 							/>
 						</span>
 
-						<div className='flex flex-wrap gap-[15px]'>
+						<div className='flex flex-col md:flex-row items-center gap-[15px]'>
 							<button
 								htmlFor='contact_form'
 								id='contact_btn'

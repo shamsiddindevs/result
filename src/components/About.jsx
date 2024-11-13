@@ -1,4 +1,3 @@
-import React from "react";
 import a1 from "../assets/img/about/1.webp";
 import a2 from "../assets/img/about/2.webp";
 import a3 from "../assets/img/about/3.webp";
@@ -12,10 +11,10 @@ const About = () => {
     <section
       id="about"
       style={{backgroundColor: "rgb(81, 163, 254)"}}
-      className="pt-[45px]">
+      className="pt-5">
       <div className="w-full max-w-[1200px] mx-auto  px-5  ">
         <div className=" flex flex-col gap-2">
-          <h1 className="text-white text-[40px] leading-[48px] font-bold text-center max-w-[714px] mx-auto">
+          <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold md:font-bold text-center max-w-[714px] mx-auto">
             Bizning kursimiz kimga to’g’ri keladi va sizga qanday natijalar olib
             keladi:
           </h1>

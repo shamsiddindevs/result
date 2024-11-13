@@ -17,7 +17,7 @@ const Result = () => {
       style={{backgroundColor: "rgb(191, 143, 253)"}}>
       <div className="w-full max-w-[1200px] mx-auto px-5">
         <div className="flex justify-between w-full relative mb-[45px]">
-          <h2 className="text-white text-[40px] leading-[48px] font-bold max-w-[640px]">
+          <h2 className="text-white text-3xl md:text-3xl lg:text-4xl font-semibold md:font-bold text-center max-w-[640px]">
             Ingliz tili — ajoyib!
             <br />
             Ammo, kursni tugatgandan so'ng qanday natijalarga erisha olasiz?

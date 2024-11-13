@@ -15,7 +15,7 @@ const Program = () => {
       className="pt-[45px] "
       style={{backgroundColor: "rgb(255, 181, 37)"}}>
       <div className="w-full max-w-[1200px] mx-auto px-5">
-        <h1 className="text-white text-[40px] leading-[48px] font-bold text-center max-w-[714px] mx-auto">
+        <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold text-center max-w-[714px] mx-auto">
           Sizni nima kutmoqda
         </h1>
         <div className="grid grid-cols-1 gap-[35px] lg:grid-cols-2 mt-[35px] ">

@@ -1,4 +1,3 @@
-import React from "react";
 import t1 from "../assets/img/tarif/1.webp";
 import {FaChevronRight} from "react-icons/fa";
 
